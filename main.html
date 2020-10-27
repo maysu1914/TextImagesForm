@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Send Images In Text Input</title>
+</head>
+
+<body>
+    <h3 style="margin-bottom: 0px;">File Input</h3>
+    <span><i>to read images</i></span>
+    <br>
+    <input id="input-images" type="file" multiple="multiple" accept="image/*">
+    <h3 style="margin-bottom: 0px;">Images</h3>
+    <div id="images">
+
+    </div>
+    <h3 style="margin-bottom: 0px;">Text Input Contains Images as Text</h3>
+    <span><i>Should be hidden in real scenario</i></span>
+    <br>
+    <form action="POST">
+        <input id="text-input" name="images" type="text">
+        <button type="submit">Upload!</button>
+        <br>
+        <span><i>after you send the form, you must decode these base64 images and you can save them where ever you want</i></span>
+    </form>
+
+    <h3 style="margin-bottom: 0px;">Pros of this project:</h3>
+    <ul>
+        <li>You can compress images in frontend which is save you time</li>
+        <li>Uncompressed image uploads will be heavy for server; compressed image uploads will be lighter</li>
+        <li>You can easily control the images in frontend (adding or removing one by one); you can't do with standard file input (multiple enabled)</li>
+    </ul>
+    <h3 style="margin-bottom: 0px;">Cons of this project:</h3>
+    <ul>
+        <li>You must decode the image datas after received in server</li>
+    </ul>
+
+</body>
+
+<script src="TextImage.js"></script>
+
+</html>
