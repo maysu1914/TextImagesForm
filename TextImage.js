@@ -3,9 +3,9 @@ init()
 function init() {
     console.log("TextImage is initializing...")
 
-    img_input = document.getElementById('input-images'); // multiple file type input element
-    img_section = document.getElementById('images'); // element to add images
-    text_input = document.getElementById('text-input'); // element to write final image datas
+    img_input = document.getElementById('input-images'); // multiple enabled file input element for file reads only
+    img_section = document.getElementById('images'); // selected image elements will append
+    text_input = document.getElementById('text-input'); // final image datas will be written
     max_image_length = 512; // max image edge length
     max_image = 8; // max number of images that can be added
     current_image = 0; // data_id counter for images
